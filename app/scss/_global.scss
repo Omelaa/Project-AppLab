@@ -1,0 +1,63 @@
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $default;
+  @include poppins(400);
+  background-color: #ffffff;
+  min-width: 0;
+
+  @include r (990) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #242f51;
+  font-size: 36px;
+  line-height: 1.2;
+  @include poppins(600);
+}
+
+.button {
+  padding: 15px 40px;
+  background-color: $button;
+  color: #ffffff;
+  @include poppins(700);
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+  &:hover,
+  &:active,
+  &:focus{
+    background-color: #ffffff;
+    color: $button;
+    border: 2px solid $button;
+  }
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}

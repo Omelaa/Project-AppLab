@@ -1,0 +1,291 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'libs';
+// @import 'components/header';
+// @import 'components/footer';
+// @import 'components/filter-card';
+// @import 'components/insights-partners';
+// @import 'components/breadcrumbs';
+// @import 'index-page';
+
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  // background-color: rgba(255, 255, 255, 0.898);
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+}
+
+.menu {
+  &__items {
+    display: flex;
+    margin-right: 55px;
+  }
+
+  &__item {
+    color: #242f51;
+    line-height: 2.7;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    transition: opacity 0.5s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header-info {
+  background-image: url(../images/content/header/bg.png);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // height: 100vh;
+  padding: 110px 0;
+  // min-height: 900px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__wrapper {
+    padding: 0 0 45px;
+    max-width: 530px;
+  }
+
+  &__chose {
+    background-color: #e2eaed;
+    border-radius: 25px;
+    max-width: 365px;
+    width: 100%;
+    padding: 5px 45px;
+    display: flex;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #242f51;
+
+    span {
+      background-color: #feaa25;
+      border-radius: 50%;
+      display: block;
+      width: 40px;
+      height: 38px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        background-image: url(../images/content/header/icon.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 18px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 45px;
+  }
+
+  &__btn {
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      color: $button;
+      transition: opacity 0.5s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 820px;
+  }
+}
+
+.partners {
+  padding: 115px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #242f51;
+  }
+
+
+  &__items {}
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    min-width: 0;
+  }
+}
+
+.apps {
+  padding: 100px 0;
+  display: flex;
+  justify-content: flex-end;
+
+  &__inner {
+    max-width: 435px;
+    margin-right: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 85px;
+  }
+
+  &__items {
+    max-width: 265px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+
+  &__img {
+    order: -1;
+    margin-left: -95px;
+  }
+}
+
+.apps-box {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -122px;
+    top: 19px;
+  }
+
+  &::before {
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 58px;
+    height: 54px;
+    left: -107px;
+    top: 36px;
+
+  }
+
+  &--pink {
+    &:after {
+      background-image: url(../images/content/icons/speed.png);
+    }
+
+    &::before {
+      background-color: $litePink;
+    }
+  }
+
+  &--blue {
+    &:after {
+      background-image: url(../images/content/icons/prototyping.png);
+      height: 56px;
+      top: 29px;
+    }
+
+    &::before {
+      background-color: $liteBlue;
+    }
+  }
+
+  &--green {
+    &:after {
+      background-image: url(../images/content/icons/vector.png);
+      top: 17px;
+    }
+
+    &::before {
+      background-color: $liteGreen;
+      top: 3px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    @include poppins(600);
+    line-height: 1.1;
+
+    &--pink {
+      color: $pink;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--green {
+      color: $green;
+    }
+  }
+}

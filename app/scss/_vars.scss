@@ -1,0 +1,47 @@
+$default: #616368;
+$button: #2500f9;
+$pink: #f55767;
+$litePink: #ffecef;
+$blue: #2563ff;
+$liteBlue: #f4f4ff;
+$green: #40975f;
+$liteGreen: #e4ffee;
+
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin poppins($weight) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
+
+@mixin checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
