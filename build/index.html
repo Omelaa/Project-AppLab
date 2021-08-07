@@ -18,6 +18,10 @@
         <a class="header__logo logo" href="#">
           <img class="logo" src="images/content/header/logo.svg" alt="logotype">
         </a>
+        <button class="header__burger" type="button">
+          <span></span>
+          <div class="sr-only">I'm menu burger</div>
+        </button>
         <nav class="menu">
           <ul class="menu__items">
             <li class="menu__item">
@@ -53,6 +57,7 @@
       </div>
     </div>
   </header>
+
   <div class="header-info">
     <div class="container">
       <div class="header-info__inner">
@@ -84,92 +89,95 @@
   </div>
 
   <main class="main">
-    <section class="info">
+    <section class="partners">
       <div class="container">
-        <div class="partners">
-          <div class="partners__title">
-            Trusted by companies like
-          </div>
-          <ul class="partners__items swiper-container">
-            <div class="partners__wrapper swiper-wrapper">
-              <li class="partners__item swiper-slide">
-                <img class="partners__img" src="images/content/info/1.png" alt="partner">
-              </li>
-              <li class="partners__item swiper-slide">
-                <img class="partners__img" src="images/content/info/2.png" alt="partner">
-              </li>
-              <li class="partners__item swiper-slide">
-                <img class="partners__img" src="images/content/info/3.png" alt="partner">
-              </li>
-              <li class="partners__item swiper-slide">
-                <img class="partners__img" src="images/content/info/4.png" alt="partner">
-              </li>
-              <li class="partners__item swiper-slide">
-                <img class="partners__img" src="images/content/info/5.png" alt="partner">
-              </li>
-            </div>
-          </ul>
+        <div class="partners__title">
+          Trusted by companies like
         </div>
-        <div class="apps">
-          <div class="apps__inner">
-            <h2 class="apps__title title">
-              Awesome apps features
-            </h2>
-            <div class="apps__subtitle">
-              <p>
-                Increase productivity with a simple to-do app. app for
-                managing your personal budgets.
-              </p>
-            </div>
-            <ul class="apps__items">
-              <li class="apps__item">
-                <article class="apps-box apps-box--pink">
-                  <div class="apps-box__title apps-box__title--pink">
-                    Fast Performance
-                  </div>
-                  <div class="apps-box__subtitle">
-                    <p>
-                      Get your blood tests delivered at
-                      home collect a sample from the
-                      news your blood tests.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li class="apps__item">
-                <article class="apps-box apps-box--blue">
-                  <div class="apps-box__title apps-box__title--blue">
-                    Prototyping
-                  </div>
-                  <div class="apps-box__subtitle">
-                    <p>
-                      Get your blood tests delivered at
-                      home collect a sample from the
-                      news your blood tests.
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li class="apps__item">
-                <article class="apps-box apps-box--green">
-                  <div class="apps-box__title apps-box__title--green">
-                    Vector Editing
-                  </div>
-                  <div class="apps-box__subtitle">
-                    <p>
-                      Get your blood tests delivered at
-                      home collect a sample from the
-                      news your blood tests.
-                    </p>
-                  </div>
-                </article>
-              </li>
-            </ul>
+        <ul class="partners__items swiper-container">
+          <div class="partners__wrapper swiper-wrapper">
+            <li class="partners__item swiper-slide">
+              <img class="partners__img" src="images/content/info/1.png" alt="partner">
+            </li>
+            <li class="partners__item swiper-slide">
+              <img class="partners__img" src="images/content/info/2.png" alt="partner">
+            </li>
+            <li class="partners__item swiper-slide">
+              <img class="partners__img" src="images/content/info/3.png" alt="partner">
+            </li>
+            <li class="partners__item swiper-slide">
+              <img class="partners__img" src="images/content/info/4.png" alt="partner">
+            </li>
+            <li class="partners__item swiper-slide">
+              <img class="partners__img" src="images/content/info/5.png" alt="partner">
+            </li>
           </div>
-          <img class="apps__img" src="images/content/apps/bg.png" alt="background"></img>
+        </ul>
+      </div>
+      <div class="apps ibj" style="background-image: url(images/content/apps/bg.png);">
+        <div class="container">
+          <div class="apps__wrapper">
+            <div class="apps__inner">
+              <h2 class="apps__title title">
+                Awesome apps features
+              </h2>
+              <div class="apps__subtitle">
+                <p>
+                  Increase productivity with a simple to-do app. app for
+                  managing your personal budgets.
+                </p>
+              </div>
+              <ul class="apps__items">
+                <li class="apps__item">
+                  <article class="apps-box apps-box--pink">
+                    <div class="apps-box__title apps-box__title--pink">
+                      Fast Performance
+                    </div>
+                    <div class="apps-box__subtitle">
+                      <p>
+                        Get your blood tests delivered at
+                        home collect a sample from the
+                        news your blood tests.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="apps__item">
+                  <article class="apps-box apps-box--blue">
+                    <div class="apps-box__title apps-box__title--blue">
+                      Prototyping
+                    </div>
+                    <div class="apps-box__subtitle">
+                      <p>
+                        Get your blood tests delivered at
+                        home collect a sample from the
+                        news your blood tests.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="apps__item">
+                  <article class="apps-box apps-box--green">
+                    <div class="apps-box__title apps-box__title--green">
+                      Vector Editing
+                    </div>
+                    <div class="apps-box__subtitle">
+                      <p>
+                        Get your blood tests delivered at
+                        home collect a sample from the
+                        news your blood tests.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      </div>
     </section>
+    <!--
     <section class="smart">
       <div class="container">
         <div class="smart__wrapper">
@@ -231,9 +239,10 @@
             </article>
           </li>
         </ul>
-        <div class="designed">
+      </div>
+      <div class="designed ibj" style="background-image: url(images/content/designet/bg.png);">
+        <div class="container">
           <div class="designed__inner">
-            <img class="designed__img" src="images/content/designet/bg.png" alt="background">
             <div class="designed__wrapper">
               <h3 class="designed__title title">
                 Designed & built by
@@ -353,7 +362,9 @@
             </article>
           </li>
         </ul>
-        <div class="features">
+      </div>
+      <div class="features ibj" style="background-image: url(images/content/features/bg.png);">
+        <div class="container">
           <div class="features__inner">
             <h3 class="features__title title">
               Ultimate features
@@ -427,8 +438,6 @@
               See all
             </a>
           </div>
-          <img class="features__img" src="images/content/features/bg.png" alt="#">
-          </img>
         </div>
       </div>
     </section>
@@ -574,9 +583,23 @@
                 elevant channels such as Facebook.
               </p>
             </div>
-            <div class="meet__rate">
-              111
-            </div>
+            <form class="meet-rate" action="#">
+              <div class="meet-rate__wrapper">
+                <div class="meet-rate__items">
+                  <input class="meet-rate__item" id="meet-rate__5" type="radio" name="rating" value="5">
+                  <label class="meet-rate__lable" for="meet-rate__5"></label>
+                  <input class="meet-rate__item" id="meet-rate__4" type="radio" name="rating" value="4" checked>
+                  <label class="meet-rate__lable" for="meet-rate__4"></label>
+                  <input class="meet-rate__item" id="meet-rate__3" type="radio" name="rating" value="3">
+                  <label class="meet-rate__lable" for="meet-rate__3"></label>
+                  <input class="meet-rate__item" id="meet-rate__2" type="radio" name="rating" value="2">
+                  <label class="meet-rate__lable" for="meet-rate__2"></label>
+                  <input class="meet-rate__item" id="meet-rate__1" type="radio" name="rating" value="1">
+                  <label class="meet-rate__lable" for="meet-rate__1"></label>
+                </div>
+
+              </div>
+            </form>
             <h3 class="meet__second-title title">
               User friendly & Customizable
             </h3>
@@ -591,10 +614,10 @@
                 generated content in real-time will have multiple touchpoints for offshoring.
               </p>
             </div>
-            <div class="meet-slider">
-              <ul class="meet-slider__items">
-                <li class="meet-slider__item">
-                  <img class="meet-slider__img" src="images/content/meet/1.png" alt="#">
+            <div class="meet-slider swiper-container">
+              <ul class="meet-slider__items swiper-wrapper">
+                <li class="meet-slider__item swiper-slide">
+                  <img class="meet-slider__img" src="images/content/meet/1.png" alt="Zoltan Nemeth">
                   </img>
                   <div class="meet-slider__info">
                     <span>Zoltan Nemeth</span>
@@ -602,17 +625,223 @@
                   </div>
                 </li>
               </ul>
+              <div class="meet-slider__btns">
+                <button class="meet-slider__prev" type="button" checked>
+                  <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                    <use xlink:href="images/sprite.svg#previous"></use>
+                  </svg>
+                  <span class="sr-only">previous arrow</span>
+                </button>
+                <span></span>
+                <button class="meet-slider__next" type="button">
+                  <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                    <use xlink:href="images/sprite.svg#next"></use>
+                  </svg>
+                  <span class="sr-only">next arrow</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="asked">
+      <div class="container">
+        <h2 class="asked__title title">
+          Frequently asked questions
+        </h2>
+        <div class="asked__subtitle">
+          <p>
+            The rise of mobile devices transforms the way we consume information entirely
+            and the world's most elevant channels such as Facebook.
+          </p>
+        </div>
+        <div class="asked__inner">
+          <ul class="asked__items">
+            <li class="asked__item one">
+              <div class="asked__second-title title">
+                How to contact with riders emergency?
+              </div>
+              <div class="asked__text">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches
+                  to corporate
+                  strategy foster collaborative thinking to further the overall value proposition. Organically grow the
+                  holistic world
+                  view of disruptive innovation via workplace diversity and empowerment.
+                </p>
+              </div>
+            </li>
+            <li class="asked__item one">
+              <div class="asked__second-title title">
+                App installation failed, how to update system information?
+              </div>
+              <div class="asked__text">
+                <p>
+                  Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
+                  going forward, a new normal that has evolved from generation X is on the runway heading towards a
+                  streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
+                  offshoring.
+                </p>
+              </div>
+            </li>
+            <li class="asked__item one">
+              <div class="asked__second-title title">
+                Website reponse taking time, how to improve?
+              </div>
+              <div class="asked__text">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches
+                  to corporate strategy foster collaborative thinking to further the overall value proposition.
+                  Organically grow the holistic world view of disruptive innovation via workplace diversity and
+                  empowerment.
+                </p>
+                <p>
+                  Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
+                  going forward, a new normal that has evolved from generation X is on the runway heading towards a
+                  streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
+                  offshoring.
+                </p>
+              </div>
+            </li>
+            <li class="asked__item one">
+              <div class="asked__second-title title">
+                New update fixed all bug and issues
+              </div>
+              <div class="asked__text">
+                <p>
+                  At the end of the day,
+                  going forward, a new normal that has evolved from generation X is on the runway heading towards a
+                  streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
+                  offshoring.
+                </p>
+              </div>
+            </li>
+            <li class="asked__item one">
+              <div class="asked__second-title title">
+                How to contact with riders emergency?
+              </div>
+              <div class="asked__text">
+                <p>
+                  Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches
+                  to corporate
+                  strategy foster collaborative thinking to further the overall value proposition. Organically grow the
+                  holistic world
+                  view of disruptive innovation via workplace diversity and empowerment.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="download ibj" style="background-image: url(images/content/download/bg.png);">
+        <div class="container">
+          <div class="download__inner">
+            <h3 class="download__title title">
+              Download our App now !
+            </h3>
+            <div class="download__subtitle">
+              <p>
+                The rise of mobile devices transforms the way we consume information entirely
+                and the world's most elevant channels such as Facebook.
+              </p>
+            </div>
+            <div class="download__app">
+              <a class="download__google-play" href="#">
+                <img class="download__img" src="images/content/download/1.png" alt="google play">
+              </a>
+              <a class="download__appstore" href="#">
+                <img class="download__img" src="images/content/download/2.png" alt="app store">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a class="footer__logo logo" href="#">
+          <img class="logo" src="images/content/header/logo.svg" alt="logotype">
+        </a>
+        <nav class="menu footer-menu">
+          <ul class="menu__items footer-menu__items">
+            <li class="menu__item footer-menu__item">
+              <a class="menu__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="menu__item footer-menu__item">
+              <a class="menu__link" href="#">
+                Key Features
+              </a>
+            </li>
+            <li class="menu__item footer-menu__item">
+              <a class="menu__link" href="#">
+                Pricing
+              </a>
+            </li>
+            <li class="menu__item footer-menu__item">
+              <a class="menu__link" href="#">
+                Testiminial
+              </a>
+            </li>
+            <li class="menu__item footer-menu__item">
+              <a class="menu__link" href="#">
+                <span>FAQ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                  <use xlink:href="images/sprite.svg#twitter"></use>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <svg viewBox="0 0 15.28 15.281" fill="#e0e3e7" width="25" height="25">
+                  <use xlink:href="images/sprite.svg#apple"></use>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__desc">
+          Copyright© Arifur Rahman Tushar 2019. All rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  -->
 
 
 
 
-  <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
