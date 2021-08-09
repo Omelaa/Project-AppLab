@@ -41,7 +41,6 @@ new Swiper('.meet-slider',{
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
-  
     autoplay: {
      // Пауза между прокруткой
 		  delay: 2000,
