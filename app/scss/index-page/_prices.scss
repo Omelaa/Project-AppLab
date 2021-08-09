@@ -1,0 +1,159 @@
+.prices {
+  padding: 105px 0 112px 0;
+
+  @include r(1200) {
+    padding: 80px 0 0px 0;
+  }
+
+  @include r(414) {
+    padding: 50px 0 0px 0;
+  }
+
+  &__title,
+  &__subtitle {
+    max-width: 575px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    max-width: 635px;
+    margin-bottom: 75px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  &__inner {
+    display: flex;
+    border: 2px solid #ebebeb;
+    border-radius: 50px;
+  }
+
+  &__btn {
+    color: #ebebeb;
+    background-color: transparent;
+    padding: 10px 30px;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $button;
+    }
+
+  }
+
+  .mixitup-control-active {
+    background-color: $button;
+    color: #ffffff;
+  }
+
+
+  &__items {
+    display: flex;
+    justify-content: center;
+
+    @include r(1200) {
+      flex-wrap: wrap;
+    }
+
+    @include r(768) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &__item {
+    height: 550px;
+    max-width: 320px;
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #999ca5;
+    overflow: hidden;
+    transition: min-height 0.5s, height 0.5s, opacity 0.5s, transform 0.5s;
+
+    &:hover {
+      height: auto;
+      height: 100%;
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include r(990) {
+        margin-bottom: 25px;
+      }
+
+      @include r(768) {
+        margin-right: 0px;
+      }
+    }
+
+    &:hover .prices__hide-button {
+      opacity: 1;
+      transform: translateY(10px);
+      padding: 0px 0 35px 0;
+    }
+  }
+
+  &__wrapper {
+    background-color: #f5f8f9;
+    display: block;
+    padding: 45px 50px 40px;
+  }
+
+  &__price {
+    span {
+      color: $darcGray;
+      font-size: 60px;
+      @include poppins(600);
+    }
+  }
+
+  &__lable {
+    span {
+      display: block;
+      font-size: 20px;
+      line-height: 1.4;
+      color: $darcGray;
+      @include poppins(600);
+    }
+  }
+
+  &__list {
+    padding: 30px 50px 25px;
+  }
+
+  &__point {
+    line-height: 2.8;
+  }
+
+  &__button {
+    padding: 15px 45px;
+    margin-bottom: 20px;
+  }
+
+  &__hide-button {
+    opacity: 0;
+    color: $button;
+    transition: color 0.5s, transform 0.5s, padding 0.5s, opacity 0.5s;
+    @include poppins(600);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #0072ff;
+    }
+  }
+}

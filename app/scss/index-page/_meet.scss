@@ -1,0 +1,261 @@
+.meet {
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: 140px 265px;
+
+  @include r(1200) {
+    background-position: center center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 195px 0 50px 0;
+
+    @include r (1200) {
+      padding: 115px 0 0px 0;
+      align-items: center;
+    }
+
+    @include r (768) {
+      padding: 75px 0 0px 0;
+    }
+
+    @include r (414) {
+      padding: 50px 0 0px 0;
+    }
+  }
+
+  &__wrapper {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 0 0 15px;
+
+    @include r(1200) {
+      background-color: rgba(255, 255, 255, 0.912);
+      border-radius: 25px;
+      padding: 15px;
+      max-width: 670px;
+    }
+
+
+  }
+
+  &__title {
+    max-width: 485px;
+    margin-bottom: 35px;
+    font-size: 40px;
+
+    @include r (768) {
+      font-size: 30px;
+    }
+
+    @include r (768) {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 490px;
+    margin-bottom: 10px;
+  }
+
+  &__rate {
+    margin-bottom: 20px;
+  }
+
+  &__second-title {
+    font-size: 20px;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+
+  &__second-sub {
+    max-width: 570px;
+    margin-bottom: 50px;
+  }
+}
+
+.meet-rate {
+  margin-bottom: 15px;
+
+  &__wrapper {
+    position: relative;
+    font-size: 34px;
+    display: inline-block;
+
+    &::before {
+      content: "★★★★★";
+      display: block;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+
+    &:checked,
+    &:checked~.meet-rate__lable {
+      color: #ffcc00;
+    }
+  }
+
+  &__lable {
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: #ebebeb;
+
+    &::before {
+      content: "★";
+      display: block;
+      transition: color 0.3s;
+    }
+
+    &:hover,
+    &:hover~&,
+    &:checked~&:hover {
+      color: #ffcc00;
+    }
+  }
+}
+
+.meet-slider {
+  &__items {
+    padding-bottom: 60px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    @include poppins(600);
+
+    @include r(414) {
+      font-size: 16px;
+    }
+
+    span {
+      color: $darcGray;
+    }
+  }
+
+  &__img {
+    margin-right: 35px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+
+    @include r (1200) {
+      right: 100px;
+    }
+
+    @include r (768) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 0;
+    }
+
+    span {
+      margin-right: 10px;
+      height: 25px;
+      width: 1px;
+      background-color: #e7e7e7;
+      display: block;
+    }
+  }
+
+  &__next,
+  &__prev {
+    border: 2px solid #eff3f8;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: inherit;
+
+    &::after {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+    }
+
+    svg {
+      transition: fill 0.5s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg {
+        fill: $button;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #eff3f8;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__next {
+    &::after {
+      // background-image: url(../images/content/icons/next.svg);
+      left: 10px;
+    }
+  }
+
+  &__prev {
+    &::after {
+      // background-image: url(../images/content/icons/previous.svg);
+      left: 8px;
+    }
+  }
+}

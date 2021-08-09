@@ -1,0 +1,258 @@
+.partners {
+  padding: 115px 0 0 0;
+
+  @include r (768) {
+    padding: 75px 0 0 0;
+
+  }
+
+  @include r (414) {
+    padding: 50px 0 0 0;
+
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: $darcGray;
+  }
+
+
+  &__items {}
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    min-width: 0;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+}
+
+.apps {
+  padding: 215px 0 40px;
+  background-repeat: no-repeat;
+  background-position: 10% 170px;
+
+  @include r (1200) {
+    background-size: 0;
+    padding: 115px 0 40px;
+  }
+
+  @include r (768) {
+    padding: 75px 0 0px;
+  }
+
+  @include r (414) {
+    padding: 50px 0 0px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @include r (1200) {
+      justify-content: center;
+    }
+  }
+
+  &__inner {
+    max-width: 435px;
+    margin-right: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include r (1200) {
+      margin-right: 0;
+      max-width: 1200px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include r (768) {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    @include r (414) {
+      font-size: 22px;
+    }
+
+  }
+
+  &__subtitle {
+    margin-bottom: 85px;
+
+    @include r (768) {
+      margin-bottom: 125px;
+      text-align: center;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+
+    @include r (768) {
+      align-items: center;
+      margin-right: 0;
+
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include r (768) {
+        text-align: center;
+        margin-bottom: 125px;
+      }
+    }
+  }
+}
+
+.apps-box {
+  position: relative;
+  max-width: 265px;
+
+  @include r (1200) {
+    max-width: 420px;
+  }
+
+  @include r (768) {
+    max-width: 385px;
+  }
+
+  @include r (414) {
+    max-width: 265px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -122px;
+    top: 19px;
+
+    @include r (768) {
+      left: 150px;
+      top: -100px;
+    }
+
+    @include r (414) {
+      left: 87px;
+    }
+  }
+
+  &::before {
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 58px;
+    height: 54px;
+    left: -107px;
+    top: 36px;
+
+    @include r (768) {
+      left: 165px;
+      top: -85px;
+    }
+
+    @include r (414) {
+      left: 102px;
+    }
+
+  }
+
+  &--pink {
+    &:after {
+      background-image: url(../images/content/icons/speed.png);
+    }
+
+    &::before {
+      background-color: $litePink;
+    }
+  }
+
+  &--blue {
+    &:after {
+      background-image: url(../images/content/icons/prototyping.png);
+      height: 56px;
+      top: 29px;
+
+      @include r (768) {
+        top: -85px;
+      }
+    }
+
+    &::before {
+      background-color: $liteBlue;
+    }
+  }
+
+  &--green {
+    @include r (768) {
+      text-align: center;
+
+    }
+
+    &:after {
+      background-image: url(../images/content/icons/vector.png);
+      top: 17px;
+
+      @include r (768) {
+        top: -85px;
+      }
+    }
+
+    &::before {
+      background-color: $liteGreen;
+      top: 3px;
+
+      @include r (768) {
+        top: -110px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    @include poppins(600);
+    line-height: 1.1;
+
+    &--pink {
+      color: $pink;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--green {
+      color: $green;
+    }
+
+    @include r (414) {
+      font-size: 18px;
+    }
+  }
+}

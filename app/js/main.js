@@ -74,15 +74,20 @@ $(function(){
      $('body').toggleClass('lock');
    });
 
-       var mixer = mixitup('.prices__items');
-
-
-       $('.asked__second-title').click(function () {
-  if ($('.asked__item').hasClass('one')) {
+   $(".menu a, .header__logo, .footer-menu a, .footer__logo").on("click", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
+  
+  $('.asked__second-title').click(function () {
+    if ($('.asked__item').hasClass('one')) {
       $('.asked__second-title').not($(this)).removeClass('active');
       $('.asked__text').not($(this).next()).slideUp(300);
-  }
-  $(this).toggleClass('active').next().slideToggle(300);
-});
-          
+    }
+    $(this).toggleClass('active').next().slideToggle(300);
+  });
+  
+  var mixer = mixitup('.prices__items');
 });
